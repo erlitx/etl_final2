@@ -55,7 +55,7 @@ with DAG(
     # Шаг 2 — Запуск PySpark скрипта
     run_processing_job = DataprocCreatePysparkJobOperator(
         task_id='run_spark_processing',
-        main_python_file_uri=f's3a://{S3_STORAGE_BUCKET}/scripts/clean-data.py'
+        main_python_file_uri=f's3a://{S3_STORAGE_BUCKET}/scripts/clean.py'
     )
 
     # Шаг 3 — Очистка ресурсов
